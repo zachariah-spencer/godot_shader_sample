@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://d0qdjrlcmxqgc"]
+
+[ext_resource type="Script" uid="uid://bbrrcqslo2u71" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Shader" uid="uid://dn4i7hg3cpt1c" path="res://water_shader.gdshader" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://mhsv02d5gaqs" path="res://art/blue.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bqd22bj8oy5wk" path="res://art/displacement.png" id="4_lquwl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("2_0xm2m")
+shader_parameter/displacement_map = ExtResource("4_lquwl")
+shader_parameter/displacement_perc = 0.02
+
+[node name="Main" type="Node2D" unique_id=1550172362]
+script = ExtResource("1_ig7tw")
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1997925373]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="WaterLayerRight" type="Node2D" parent="." unique_id=1113284818]
+
+[node name="Right1" type="Sprite2D" parent="WaterLayerRight" unique_id=532168125]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Right2" type="Sprite2D" parent="WaterLayerRight" unique_id=1332616287]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Right3" type="Sprite2D" parent="WaterLayerRight" unique_id=792643725]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Right4" type="Sprite2D" parent="WaterLayerRight" unique_id=1088481378]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="WaterLayerUp" type="Node2D" parent="." unique_id=706633476]
+
+[node name="Up1" type="Sprite2D" parent="WaterLayerUp" unique_id=1695681470]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up2" type="Sprite2D" parent="WaterLayerUp" unique_id=53742160]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up3" type="Sprite2D" parent="WaterLayerUp" unique_id=1132585024]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up4" type="Sprite2D" parent="WaterLayerUp" unique_id=1422217040]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up5" type="Sprite2D" parent="WaterLayerUp" unique_id=233183360]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up6" type="Sprite2D" parent="WaterLayerUp" unique_id=1762594275]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up7" type="Sprite2D" parent="WaterLayerUp" unique_id=1970546170]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Up8" type="Sprite2D" parent="WaterLayerUp" unique_id=2137099]
+modulate = Color(1, 1, 1, 0.48235294)
+
+[node name="Label" type="Label" parent="." unique_id=1907407574]
+offset_left = 500.0
+offset_right = 501.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+
+[node name="BlueSquare" type="Sprite2D" parent="." unique_id=780787118]
+texture = ExtResource("2_1bvp3")
+
+[node name="ScreenEffect" type="ColorRect" parent="." unique_id=1707890446]
+material = SubResource("ShaderMaterial_1bvp3")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
